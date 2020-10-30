@@ -12,20 +12,20 @@ light_x, light_y, initial_tx, initial_ty = [int(i) for i in input().split()]
     
 while True:
     remaining_turns = int(input())
-    fly = ""  
+    walk = ""  
 
     if initial_ty > light_y:
         initial_ty -= 1
-        fly += north      
+        walk += north      
     elif initial_ty < light_y:
         initial_ty += 1
-        fly += south
+        walk += south
 
     if initial_tx < light_x:
         initial_tx += 1
-        fly += east       
+        walk += east       
     elif initial_tx > light_x:
         initial_tx -= 1
-        fly += west
+        walk += west
     
-    print(fly)
+    print(walk)
